@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,500..800;1,500..800&display=swap');
+
+*, :root{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+:root{
+  --color-dark-blue: #065E7C;
+  --color-light-blue: #387E96;
+  --color-text: #121214;
+  --color-white: #F4FCFF;
+  font-family: 'Mulish', sans-serif;
+  line-height: 25px;
+}
+
+
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+header{
+  height: 72px;
+  width: 100%;
+  background-color: var(--color-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  --start-y: -100%;
+  animation: headermove .5s;
+}
+header img{
+  height: 42px;
+  width: 42px;
+  cursor: pointer;
+}
+header form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60%;
+}
+header form input{
+  height: 42px;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
+header input::placeholder{
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Mulish', sans-serif;
+}
+
+
+main > img{
+  width: 100%;
+
+  animation: imgmove 0.5s;
+}
+main section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2vh 4vw 3vh;
+}
+h1{
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1vh 0;
+}
+main section .buttons{
+  display: flex;
+  gap: 8px;
+}
+main section .buttons .like{
+  cursor: pointer;
+}
+main section .buttons .like:hover{
+  transform: scale(1.05);
+}
+main section div img{
+  height: 40px;
+}
+main article{
+  padding: 0 4vw;
+}
+main article h2{
+  font-size: 1rem;
+  font-weight: 500;
+}
+main article h2:nth-child(3){
+  margin: 3vh 0;
+}
+
+
+
+aside{
+  display: flex;
+  flex-direction: column;
+  padding: 4vh 4vw;
+  gap: 20px;
+}
+aside section{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+aside section article{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+aside section article img{
+  width: 150px;
+  height: 84px;
+  cursor: pointer;
+
+  animation: imgmove 0.5s;
+}
+aside section article img:hover{
+  transform: scale(1.05);
+}
+aside section article div{
+  display: flex;
+  flex-direction: column;
+}
+aside section article div h2{
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 15px;
+  cursor: pointer;
+}
+aside section article div p{
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+
+
+footer{
+  background-color: var(--color-light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p{
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  padding: 1.8rem 0;
+  cursor: pointer;
+}
+
+@keyframes headermove{
+  from{
+    transform: translateY(var(--start-y));
+  }
+}
+@keyframes imgmove{
+  from{
+    transform: scale(0.8);
+  }
+  50%{
+    transform: scale(1.03);
+  }
+  to{
+    transform: scale(1);
+  }
+}
